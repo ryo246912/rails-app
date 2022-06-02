@@ -9,7 +9,7 @@ RUN apt-get update -qq && apt-get -y install \
     nodejs \
     default-mysql-client
 
-# apt-getでインストールするとエラーが出るため公式のインストール方法で最新のyarnをインストールする
+#apt-getでインストールするとエラーが出るため公式のインストール方法で最新のyarnをインストールする
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 RUN apt-get update && apt-get install yarn
